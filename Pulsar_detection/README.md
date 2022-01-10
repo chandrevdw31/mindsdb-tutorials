@@ -265,7 +265,7 @@ Use the following query using mock data with the predictor.
 SELECT target_class
 FROM mindsdb.pulsar_predictor
 WHERE when_data='{"mean_integ_prf": 116.90625, "std_dev_integ_prf": 48.92060492, "ex_kurtosis_integ_prf": 0.18604632100000001, "sk_integ_prf": -0.129815137,
-"mean_dm_snr_curve": 3.037625418, "std_dev_dm_snr_curve": 17.73710156, "ex_kurtosis_dm_snr_curve": 8.122620787, "sk_dm_snr_curve": 78.81340454}'\G;
+"mean_dm_snr_curve": 3.037625418, "std_dev_dm_snr_curve": 17.73710156, "ex_kurtosis_dm_snr_curve": 8.122620787, "sk_dm_snr_curve": 78.81340454}'\G
 ```
 
 And just like that you are a low-level astronomer! We have successfully created and trained a model.
