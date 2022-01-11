@@ -6,7 +6,7 @@ Pulsars are Neutron stars which emits a pattern of broadband radio waves that sp
 
 It can be quite tricky to detect real pulsars due to radio frequencies and noise. Through deep learning tools, we can build a simple classifier to predict whether a detected signal comes from pulsar star or from other sources such as noises, interferences, etc.
 
-In this tutorial we will be exploring how MindsDB's predictive model can assist in classifying Pulsars and how this can help the astronomical world. Here is the fun part, everything from creating a database to creating and training a model wil be done with Docker and Python in Visual Studio Code, but you can follow along with any IDE.
+In this tutorial we will be exploring how MindsDB's predictive model can assist in classifying Pulsars and how this can help the astronomical world. We will be using an imbalanced dataset, with the indicator variables being '0' which means there is non pulsar detection and '1' meaning that a pulsar has been detected. Here is the fun part, everything from creating a database to creating and training a model wil be done with Docker and Python in Visual Studio Code, but you can follow along with any IDE.
 
 ## Pre-requisites
 
