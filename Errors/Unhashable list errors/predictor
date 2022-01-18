@@ -1,0 +1,27 @@
+CREATE PREDICTOR weather_predictor FROM weather ( SELECT * FROM "weather") PREDICT weather ORDER BY date GROUP BY date WINDOW 1 HORIZON 1;
+
+SELECT name, status FROM MINDSDB.PREDICTORS;
+
+SELECT * FROM mindsdb.predictors WHERE name='weather_predictor';
+
+mysql> CREATE PREDICTOR weather_predictor FROM weather ( SELECT * FROM "weather") PREDICT weather ORDER BY date GROUP BY date WINDOW 1 HORIZON 1;
+Query OK, 0 rows affected (10.02 sec)
+
+mysql> SELECT name, status FROM MINDSDB.PREDICTORS;                                                     +--------------------+----------+
+| name               | status   |
++--------------------+----------+
+| mushroom_predictor | complete |
+| pulsar_predictor   | complete |
+| diabetes_predictor | complete |
+| bitcoin_predictor  | complete |
+| weather_predictor  | error    |
++--------------------+----------+
+5 rows in set (0.62 sec)
+
+mysql> SELECT * FROM mindsdb.predictors WHERE name='weather_predictor';
++-------------------+--------+----------+---------+---------------+-----------------+-------------------------+-------------------+------------------+
+| name              | status | accuracy | predict | update_status | mindsdb_version | error                   | select_data_query | training_options |
++-------------------+--------+----------+---------+---------------+-----------------+-------------------------+-------------------+------------------+
+| weather_predictor | error  | NULL     | weather | up_to_date    | 2.62.1          | unhashable type: 'list' |                   |                  |
++-------------------+--------+----------+---------+---------------+-----------------+-------------------------+-------------------+------------------+
+1 row in set (0.62 sec)
