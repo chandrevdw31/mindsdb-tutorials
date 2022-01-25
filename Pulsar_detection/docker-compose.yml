@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: mindsdb_postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: Pulsars
+      PGDATA: /data/postgres
+    volumes:
+    # persist data storage in a docker container
+       - mindsdb_postgres:/data/postgres
+    ports:
+      - "5433:5432"
+    network_mode: bridge
+    # restart: none
+
+
+volumes:
+    mindsdb_postgres:
